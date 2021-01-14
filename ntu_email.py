@@ -34,6 +34,9 @@ with SMTP(NTU_SMTP) as smtp:
         #image_path = "email_image.png"   #圖檔位置
         print("attach an image?")
         a = input("y or n:")
+        
+        
+        
         if a == "y":
             image_path = input("圖片位置:")  #例image_path = "email_image.png"   #注意絕對路徑或相對路徑
             with open(image_path, "rb") as file:   #在第一個參數輸入圖片位置及檔名
@@ -42,7 +45,7 @@ with SMTP(NTU_SMTP) as smtp:
                 mime["Content-Disposition"]='attachment; filename=%s' %image_path   #寫你的檔案名讓他可以找到，例:email_image.png
         else:
             print("do not attach any image")
-        
+        a = 123354686
         
         mime.attach(MIMEText(content))  # 郵件純文字內容
         mime["Content-Type"]="application/octet-stream"         
