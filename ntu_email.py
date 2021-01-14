@@ -42,7 +42,7 @@ with SMTP(NTU_SMTP) as smtp:
                 mime["Content-Disposition"]='attachment; filename=%s' %image_path   #寫你的檔案名讓他可以找到，例:email_image.png
         else:
             print("do not attach any image")
-        a = 77777777
+        a = 2222222
         
         mime.attach(MIMEText(content))  # 郵件純文字內容
         mime["Content-Type"]="application/octet-stream"         
